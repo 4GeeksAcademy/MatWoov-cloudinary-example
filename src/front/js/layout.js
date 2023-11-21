@@ -5,6 +5,8 @@ import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
+import { UploadView } from "./pages/UploadView.jsx";
+import { UploadImage } from "./pages/UploadImage.jsx"
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
@@ -27,10 +29,12 @@ const Layout = () => {
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<Demo />} path="/demo" />
+                        <Route element={<UploadImage />} path="/image-upload" />
+                        <Route element={<UploadView />} path="/upload" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
-                    <Footer />
+                    {/* <Footer /> */}
                 </ScrollToTop>
             </BrowserRouter>
         </div>
